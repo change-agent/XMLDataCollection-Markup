@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- 
+    FIT1004 Assignment 1 data collection and markup
+    Semester 2 2011
+    
+    Name: Daniel Benjamin Sedhom
+    Campus: Caulfield
+    Tutorial: 2
+    Date Completed: 2011-07-04
+    
+    Task:
+       o Collect data for TWO cities of the world neither city can be selected from your home country
+         - neither Melbourne (Victoria, Australia) nor Canberra (ACT, Australia) can be selected
+    
+       o For each city you must supply the details of a minimum of three cultural features (museums,
+         botanical gardens, historical sites)
+    
+    Explanation of document structure/tags:
+    
+    In all tags below
+    - srcURL = url from which data was obtained
+    - date_extracted = date data extracted - dates must be in format YYYY-MM-DD     
+    
+    cities
+    - author = your student id 
+    - date_submitted = date file submitted to Moodle 2 - dates must be in format YYYY-MM-DD
+    
+    cityName - name of city
+  
+    country - name of country in which city is located
+   
+    region - region of country eg. state, county, etc - (may be omitted if none available)
+  
+    latitude/longitude - angular distance expressed as single degrees numeric and compass direction 
+    eg.for Canberra, Australia 35.15S and 149.08E
+    
+    elevation - metres above/below sea level
+    
+    GMTtimezone - timezone of city based on Greenwich Mean Time
+    
+    landarea - size of city in square kms
+    - greaterCity = data refers to greater city area (yes) or city zone only (no)
+    
+    populationCount - city population
+    - census_date = date the census figure was determined
+    - greaterCity = data refers to greater city area (yes) or central city zone only (no)
+    
+    culturalFeatures
+      feature type = must be MU, BG or HS (MU=Museum, BG=Botanical Gardens, HS=Historical Site)
+      fname = name of feature
+      streetAddress = full address of feature
+      contactPhone = contact phone number for feature (may be omitted if none available)
+      description = description of feature, max 200 words, insert between CDATA section
+  
+  
+    Before submission you should validate this XML instance document to ensure the format is correct:
+    
+    This file (an XML instance) can be validated by uploading your document to:
+       http://tools.decisionsoft.com/schemaValidate/
+    as the XML instance. You do not need to upload a XML schema, simply upload the instance (this
+    document) and select the Validate button. The second column (LOC) of any errors reported refers
+    to the line number of the error.
+    Alternatively this document may be validated using an XML editor tool eg. NetBeans, Eclipse etc
+    
+    The file must be submitted using your studentID as the filename with an .xml extension eg. 12345678.xml
+-->
+
+
+<cities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://studentweb.infotech.monash.edu.au/~fit1004/FIT1004datacollect.xsd"
+    author="22707387" date_submitted="2011-07-09">
+    
+    <!-- City 1 -->
+    <city>
+        <cityName>Cupertino</cityName>
+        <country>United States of America</country>
+        <region>Santa Clara</region>
+        <latlong srcURL="http://itouchmap.com/latlong.html">
+            <latitude>37.32N</latitude>
+            <longitude>122.03W</longitude>
+        </latlong>
+        <elevation srcURL="http://en.wikipedia.org/wiki/Cupertino">72</elevation>
+        <GMTtimezone srcURL="http://www.timeanddate.com/worldclock/city.html?n=1239">GMT-07:00</GMTtimezone>
+        <landArea srcURL="http://en.wikipedia.org/wiki/Cupertino" date_extracted="2011-07-04" greaterCity="no">29.153</landArea>
+        <populationCount srcURL="http://en.wikipedia.org/wiki/Cupertino" census_date="2010-04-01" greaterCity="no">	58302</populationCount>
+        <culturalFeatures>
+            <feature type="MU" srcURL="http://en.wikipedia.org/wiki/Cupertino#Places_of_interest" date_extracted="2011-07-04">
+                <fname>Cupertino Historical Society</fname>
+                <streetAddress>10185 North Stelling Road, CUPERTINO CALIFORNIA 95014, UNITED STATES OF AMERICA</streetAddress>
+                <contactPhone>+0011 1 408 9731495</contactPhone>
+                <description>
+                    <![CDATA[ 
+The Cupertino Historical Society has an elaborate museum at the Cupertino Community Center, located next to Memorial Park, which houses the Cupertino Veterans Memorial as well as an amphitheater that hosts events such as summer movies and Free Shakespeare in the Park.
+                ]]>
+                </description>
+            </feature>
+            <feature type="MU" srcURL="http://www.cupertino.com/attractions/euphrat-museum.html" date_extracted="2011-07-04">
+                <fname>Euphrat Museum of Art</fname>
+                <streetAddress>21250 Stevens Creek Boulevard, CUPERTINO CALIFORNIA 95014, UNITED STATES OF AMERICA</streetAddress>
+                <contactPhone>+0011 1 408 8648836</contactPhone>
+                <description>
+                    <![CDATA[ 
+  The Euphrat, located in the new Visual and Performing Arts Center at De Anza College, features artwork created by students and nonstudents.
+                ]]>
+                </description>
+            </feature>
+            <feature type="HS" srcURL="" date_extracted="2011-07-04">
+                <fname>Memorial Park</fname>
+                <streetAddress>Stevens Creek Boulevard and Mary Avenue , CUPERTINO CALIFORNIA 95014, UNITED STATES OF AMERICA</streetAddress>
+                <contactPhone>+0011 1 408 7773120</contactPhone>
+                <description>
+                    <![CDATA[ 
+In the heart of Cupertino lies a beautifully landscaped, 28-acre expanse containing many amenities, including six tennis courts and a softball field, all of which are lighted in the evening. There are two playgrounds, wide grassy areas, lots of trees and a Walk of Remembrance inscribed with the names of local war veterans.
+                ]]>
+                </description>
+            </feature>
+        </culturalFeatures>
+    </city> 
+
+    <!-- City 2 -->
+  <city>
+      <cityName>New York City</cityName>
+      <country>United States of America</country>      
+      <region>New York</region>
+      <latlong srcURL="http://itouchmap.com/latlong.html">
+          <latitude>40.71N</latitude>
+          <longitude>074.00W</longitude>
+      </latlong>
+      <elevation srcURL="http://en.wikipedia.org/wiki/New_york_city">10</elevation>
+      <GMTtimezone srcURL="http://wwp.greenwichmeantime.com/time-zone/usa/new-york/">GMT-04:00</GMTtimezone>
+      <landArea srcURL="http://en.wikipedia.org/wiki/New_york_city" date_extracted="2011-07-04" greaterCity="yes">789.4</landArea>
+      <populationCount srcURL="http://en.wikipedia.org/wiki/New_York_City" census_date="2010-04-01" greaterCity="yes">8175133</populationCount>
+      <culturalFeatures>
+          <feature type="MU" srcURL="http://gonyc.about.com/od/bestofnewyorkcity/tp/topattractions.htm" date_extracted="2011-07-04">
+              <fname>Ellis Island Immigration Museum</fname>
+              <streetAddress>New York Harbor, NEW YORK CITY NEW YORK 10010, UNITED STATES OF AMERICA</streetAddress>
+              <contactPhone>+0011 212 5614588</contactPhone>
+              <description>
+                  <![CDATA[ 
+The Ellis Island Immigration Museum offers visitors a fascinating look into the immigrant experience. Interactive exhibits, walking tours and movies reveal the hardships and challenges faced by immigrants passing through Ellis Island.
+                ]]>
+              </description>
+          </feature>
+          <feature type="MU" srcURL="http://www.nyctourist.com/topten_alltime.htm" date_extracted="2011-07-04">
+              <fname>Madame Tussauds Museum</fname>
+              <streetAddress>234 West 42nd Street, NEW YORK CITY NEW YORK 10036, UNITED STATES OF AMERICA</streetAddress>
+              <contactPhone>+0011 212 5129600</contactPhone>
+              <description>
+                  <![CDATA[ 
+Featuring all your favorite celebs, historical figures, and athletes, Madame Tussauds NYC is a popular NY attraction in Midtown Manhattan.
+                ]]>
+              </description>
+          </feature>
+          <feature type="MU" srcURL="http://www.nyctourist.com/topten_alltime.htm" date_extracted="2011-07-04">
+              <fname>Ground Zero Museum</fname>
+              <streetAddress>420 West 14th Street, 2nd Floor, NEW YORK CITY NEW YORK 10014, UNITED STATES OF AMERICA</streetAddress>
+              <contactPhone>+0011 212 2093370</contactPhone>
+              <description>
+                  <![CDATA[ 
+One of the most popular museums in Manhattan, the Ground Zero Museum Workshop features 100 photographs by official Ground Zero photographer Gary Marlon Suson and numerous artifacts from the Ground Zero recovery effort. Located in the Meatpacking District of Manhattan, this popular NYC museum stands just two minutes from the Chelsea Market and famous Manhattan attractions.
+                ]]>
+              </description>
+          </feature>
+      </culturalFeatures>
+  </city>
+    
+</cities>
